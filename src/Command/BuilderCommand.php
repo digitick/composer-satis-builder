@@ -30,33 +30,33 @@ class BuilderCommand extends Command
             )
             ->addOption(
                 'require-dev-dependencies',
-                'rdd',
+                null,
                 InputOption::VALUE_REQUIRED,
                 'sets "require-dev-dependencies"'
             )
             ->addOption(
                 'require-dependencies',
-                'rd',
+                null,
                 InputOption::VALUE_REQUIRED,
                 'sets "require-dependencies"'
             )
             ->addOption(
                 'add-requirements',
-                'rc',
+                null,
                 InputOption::VALUE_NONE,
-                'sets "require-dependencies"'
+                'sets "add-requirements"'
             )
             ->addOption(
                 'add-dev-requirements',
-                'drc',
+                null,
                 InputOption::VALUE_NONE,
-                'sets "require-dependencies"'
+                'sets "add-dev-requirements"'
             )
             ->addOption(
                 'reset-requirements',
-                'rr',
+                null,
                 InputOption::VALUE_NONE,
-                'sets "require-dependencies"'
+                'sets "reset-requirements"'
             );
     }
 
