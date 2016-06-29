@@ -32,13 +32,13 @@ class BuilderCommand extends Command
                 'require-dev-dependencies',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'sets "require-dev-dependencies"'
+                'sets "require-dev-dependencies". 0=false 1=true'
             )
             ->addOption(
                 'require-dependencies',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'sets "require-dependencies"'
+                'sets "require-dependencies". 0=false 1=true'
             )
             ->addOption(
                 'add-requirements',
@@ -108,11 +108,11 @@ class BuilderCommand extends Command
             $builder->resetSatisRequires();
         }
 
-        if ($input->getOption('require-dependencies')) {
+        if (null !== $input->getOption('require-dependencies')) {
             $builder->setRequireDependencies($input->getOption('require-dependencies'));
         }
 
-        if ($input->getOption('require-dev-dependencies')) {
+        if (null !== $input->getOption('require-dev-dependencies')) {
             $builder->setRequireDevDependencies($input->getOption('require-dependencies'));
         }
 
