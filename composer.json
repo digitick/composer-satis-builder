@@ -1,18 +1,23 @@
 {
-    "name": "aoe/composer-satis-builder",
+    "name": "digitick/composer-satis-builder",
     "description": "Complementary tool to Satis for updating the satis.json 'require' key from the project composer.json.",
-    "homepage": "https://github.com/AOEpeople/composer-satis-builder",
+    "homepage": "https://github.com/digitick/composer-satis-builder",
     "license": "MIT License",
     "support": {
-        "email": "dev@aoe.com",
-        "issues": "https://github.com/AOEpeople/composer-satis-builder/issues",
-        "source": "https://github.com/AOEpeople/composer-satis-builder"
+        "email": "dev@digitick.com",
+        "issues": "https://github.com/digitick/composer-satis-builder/issues",
+        "source": "https://github.com/digitick/composer-satis-builder"
     },
     "authors": [
         {
             "name": "AOE GmbH",
             "email": "dev@aoe.com",
-            "homepage": "http://www.aoe.com"
+            "homepage": "http://www.digitick.com"
+        },
+        {
+            "name": "Digitick",
+            "email": "dev@digitick.com",
+            "homepage": "http://www.digitick.com"
         }
     ],
     "require": {
