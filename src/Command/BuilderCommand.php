@@ -47,6 +47,12 @@ class BuilderCommand extends Command
                 'sets "add-requirements"'
             )
             ->addOption(
+                'merge-requirements',
+                null,
+                InputOption::VALUE_NONE,
+                'sets "merge-requirements"'
+            )
+            ->addOption(
                 'add-dev-requirements',
                 null,
                 InputOption::VALUE_NONE,
@@ -118,6 +124,9 @@ class BuilderCommand extends Command
 
         if ($input->getOption('add-requirements')) {
             $builder->addRequiresFromComposer();
+        }
+        elseif ($input->getOption('merge-requirements')) {
+            $builder->mergeRequiresFromComposer();
         }
 
         if ($input->getOption('add-dev-requirements')) {

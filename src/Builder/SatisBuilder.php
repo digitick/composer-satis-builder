@@ -51,6 +51,27 @@ class SatisBuilder
     /**
      * @return SatisBuilder
      */
+    public function mergeRequiresFromComposer()
+    {
+        if (false === isset($this->satis->require)) {
+            $this->satis->require = new \stdClass();
+        }
+        foreach ($this->composer->require as $package => $version) {
+            if('php' !== $package && isset($this->satis->require->$package)) {
+                $current_versions = explode('|', $this->satis->require->$package);
+                if(!in_array($version, $current_versions)) {
+                    $current_versions[] = $version;
+                }
+                $version = implode('|', $current_versions);
+            }
+            $this->satis->require->$package = $version;
+        }
+        return $this;
+    }
+
+    /**
+     * @return SatisBuilder
+     */
     public function addDevRequiresFromComposer()
     {
         if (false === isset($this->satis->require)) {
